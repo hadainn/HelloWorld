@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Checkout SCM') {
             steps {
-               checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dockerhub', url: 'https://github.com/hadainn/hello-world.git']]])'
+               checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dockerhub', url: 'https://github.com/hadainn/HelloWorld.git']]])'
             }
         }
         stage('Code Test') {
